@@ -8,7 +8,11 @@ import {
   Item,
 } from './styles/jumbotron';
 
-export const Jumbotron = ({ children, direction = 'row', ...restProps }) => {
+export default function Jumbotron({
+  children,
+  direction = 'row',
+  ...restProps
+}) {
   return (
     <Item>
       <Inner direction={direction} {...restProps}>
@@ -16,7 +20,7 @@ export const Jumbotron = ({ children, direction = 'row', ...restProps }) => {
       </Inner>
     </Item>
   );
-};
+}
 
 Jumbotron.Container = function JumbotronContainer({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
